@@ -1,0 +1,15 @@
+.main {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 62px;
+}
+
+@media (max-width: 1200px) {
+  .iframeWrapper {
+    margin-top: 60px;
+  }
+  .main {
+    margin-top: 40px;
+  }
+}

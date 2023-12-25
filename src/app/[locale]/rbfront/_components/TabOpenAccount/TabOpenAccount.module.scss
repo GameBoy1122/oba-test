@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: grid;
+  align-self: start;
+  justify-items: center;
+  gap: 20px;
+}
+.title {
+  font-size: 32px;
+}
+.cardsbox {
+  width: fit-content;
+  // background-color: aqua;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+  .cardsbox {
+    width:100%;
+    overflow-x:auto;
+    // background-color: red;
+  }
+}

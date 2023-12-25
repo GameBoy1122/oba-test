@@ -1,0 +1,83 @@
+<!--parent.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parent Window</title>
+  </head>
+
+  <body style="background-color: #ffffff">
+    <iframe src="/index2.html"></iframe>
+    <!-- <iframe src="https://jsdevjournal.com/test/"></iframe> -->
+
+    <script>
+      const receiveMessage = (e) => {
+        console.log(e);
+      };
+      window.addEventListener("message", receiveMessage);
+    </script>
+
+    <!-- <script>
+        const useStore = create((set) => ({
+            alert: '',
+            setAlert: (content) => set({ alert: content }),
+        }))
+
+        function usePostMessage() {
+            const setAlert = useStore((state) => state.setAlert)
+
+            useEffect(() => {
+                window.addEventListener('message', receiveMessage);
+                return () => {
+                    window.removeEventListener('message', receiveMessage);
+                }
+            }, [])
+
+            type Data = {
+                type: 'alert' | 'logout',
+                content: string
+            }
+
+            const receiveMessage = (e) => {
+                const { data: Data, origin } = e
+
+                if (origin !== "http://example.org:8080") return;
+
+                if (typeof data !== 'object') return;
+
+                var sanitizedData = sanitize(data)
+                
+                if (sanitizedData.type === 'alert') {
+                    setAlert(sanitizedData.content);
+                }
+            }
+        }
+    </script>
+
+    const IFrameContainer = () => {
+        usePostMessage()
+
+        return <iframe/>
+    }
+
+    <script>
+        alert() {
+            parent.postMessage({
+                type: 'alert',
+                payload: {
+                    content: ''
+                }
+            }, '*');
+        }
+
+        logout() {
+            parent.postMessage({
+                type: 'logout',
+                payload: {
+                    content: ''
+                }
+            }, '*');
+        }
+    </script> -->
+  </body>
+</html>

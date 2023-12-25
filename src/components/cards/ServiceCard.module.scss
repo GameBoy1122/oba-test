@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+}
+.card {
+  border-radius: 6px;
+  background: rgba(232, 228, 238, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 325px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    display: grid;
+    justify-content: center;
+  }
+  &__detail {
+    &--th {
+      color: #381961 !important;
+      text-align: center;
+      /* Primary/Med/D3 */
+      font-family: DB Helvethaica X;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    &--en {
+      color: #35323b !important;
+      text-align: center;
+      font-family: DB Helvethaica X;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+  &--disabled {
+    opacity: 0.25;
+  }
+  &--clicked {
+    outline: 4px solid var( --color-purple--secondary);
+  }
+}
+
+
+.disabled {
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 325px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  &_text {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    white-space: pre-wrap;
+  }
+}

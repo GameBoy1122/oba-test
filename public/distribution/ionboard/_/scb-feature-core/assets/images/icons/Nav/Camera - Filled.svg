@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="20px" viewBox="0 0 26 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Glyphs/Nav or Toolbar/Camera - Filled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1.5,9.49037448 C1.5,8.38879559 2.39707143,7.49578946 3.50518579,7.49578948 C3.50518579,7.49578948 5.0887404,7.49578951 7.20954984,7.49578951 C8.00191513,7.49578951 9.35049185,4.5 10.1428571,4.5 L17.8571429,4.5 C18.6243331,4.5 19.9883587,7.49578951 20.755549,7.49578951 C22.8650376,7.49578951 24.5008261,7.49578948 24.5008261,7.49578948 C25.6049394,7.49578946 26.5,8.39053861 26.5,9.49037448 L26.5,21.505415 C26.5,22.6069939 25.6102368,23.5 24.4964051,23.5 L3.50359486,23.5 C2.39703997,23.5 1.5,22.6052508 1.5,21.505415 L1.5,9.49037448 Z M21.25,10.5 C21.6642136,10.5 22,10.1642136 22,9.75 C22,9.33578644 21.6642136,9 21.25,9 C20.8357864,9 20.5,9.33578644 20.5,9.75 C20.5,10.1642136 20.8357864,10.5 21.25,10.5 Z M14,21 C17.3137085,21 20,18.3137085 20,15 C20,11.6862915 17.3137085,9 14,9 C10.6862915,9 8,11.6862915 8,15 C8,18.3137085 10.6862915,21 14,21 Z M14,19.5 C11.5147186,19.5 9.5,17.4852814 9.5,15 C9.5,12.5147186 11.5147186,10.5 14,10.5 C16.4852814,10.5 18.5,12.5147186 18.5,15 C18.5,17.4852814 16.4852814,19.5 14,19.5 Z M4,5.99999999 C4,5.72385762 4.23071289,5.5 4.5059123,5.5 L5.9940877,5.50000001 C6.27349535,5.50000001 6.5,5.7319336 6.5,6.00000001 L6.5,6.5 L4,6.49999998 L4,5.99999999 Z" id="path-1"></path>
+    </defs>
+    <g id="INDI-2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.1.1-Facial-Recognition---" transform="translate(-660.000000, -321.000000)">
+            <g id="Popup">
+                <g id="Group-8" transform="translate(547.000000, 198.000000)">
+                    <g id="Group-6" transform="translate(80.000000, 119.000000)">
+                        <g id="Glyphs/Quick-Actions/Take-Photo" transform="translate(32.000000, 0.000000)">
+                            <g id="Glyphs/Nav-or-Toolbar/Camera---Filled">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Camera---Filled" fill="#007AFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <g id="_Resources/Colors/Tint-2" mask="url(#mask-2)" fill="#7631C1" fill-rule="evenodd">
+                                    <rect id="Swatch" x="0" y="0" width="28" height="28"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

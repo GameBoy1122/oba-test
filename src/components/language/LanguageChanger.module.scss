@@ -1,0 +1,17 @@
+.select {
+  padding: 8px 4px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.select:focus-visible {
+  outline: none;
+}
+
+.option {
+  font-size: 1rem;
+  padding: 8px 4px;
+  color: #000;
+}

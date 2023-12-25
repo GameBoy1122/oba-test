@@ -1,0 +1,54 @@
+.navcontainer {
+  position: fixed;
+  top: 0;
+  // top: 40px;
+  width: 100%;
+  background-color: var(--color-purple--primary);
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  // align-items: center;
+  z-index: 100;
+
+  &_image {
+  }
+  &_title {
+    background-color: red;
+  }
+  &_user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navcontainer {
+    height: 102px;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+}
+
+.usercontainer {
+  display: grid;
+  justify-items: end;
+  &_name {
+    font-size: 22px;
+    color: white;
+  }
+  &_details {
+    font-size: 18px;
+    color: #c9c6ce;
+  }
+}
+
+.morecontainer {
+  color: white;
+  position: relative;
+  &_content {
+    width: 100px;
+  }
+}

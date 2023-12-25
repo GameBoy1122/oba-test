@@ -1,0 +1,14 @@
+<catalog>
+    <widget>
+        <name>scb-widget-indi-app-control</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Indi App Control</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

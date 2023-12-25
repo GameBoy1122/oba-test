@@ -1,0 +1,168 @@
+<!--child.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Child Window</title>
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center" id="title_page"></h1>
+    <button onclick="sendMessage('maintenance')">
+      Send Message to Parent (Maintenance)
+    </button>
+    <button onclick="sendMessage('service_unavailable')">
+      Send Message to Parent (Service Unavailable)
+    </button>
+    <button onclick="sendMessage('timeout')">
+      Send Message to Parent (Timeout)
+    </button>
+    <button onclick="sendMessage('session_expire_warning')">
+      Send Message to Parent (Session Expire Warning)
+    </button>
+    <button onclick="sendMessage('session_expire')">
+      Send Message to Parent (Session Expire)
+    </button>
+
+    <br />
+    <br />
+    <button onclick="scanCard()" class="btn-purple">Scan card</button>
+    <!-- <p style="color: #ffffff">
+      Data from Parent :
+      <span id="lastIFrameKeyCode"></span>
+    </p> -->
+    <br />
+    <p style="color: #ffffff">
+      Card :
+      <span id="card"></span>
+    </p>
+    <br />
+    <button onclick="showAlert()">Show Alert</button>
+    <br />
+    <br />
+    <p style="color: #ffffff">
+      Result :
+      <span id="result" style="font-weight: 700"></span>
+    </p>
+
+    <script>
+      let feature;
+      var params = location.href.split("?")[1].split("&");
+      const data = {};
+      const obj = {};
+
+      for (x in params) {
+        data[params[x].split("=")[0]] = params[x].split("=")[1];
+      }
+
+      const init = () => {
+        document.getElementById("title_page").textContent =
+          data?.title ?? "Page";
+        feature = data?.feature;
+      };
+
+      function scanCard() {
+        const cardType = feature == "iprofile" ? "scb_card" : "thai_card";
+
+        parent.postMessage(
+          {
+            type: `${feature}/scan_card/${cardType}`,
+            payload: {},
+          },
+          "http://localhost:3000/"
+        );
+      }
+
+      const showAlert = () => {
+        const result = new Promise((resolve, reject) => {
+          const id = (Math.random() * 10000).toFixed(0);
+          obj[id] = [resolve, reject];
+          parent.postMessage(
+            JSON.stringify({
+              type: `${feature}/alert`,
+              payload: {
+                id: id,
+                type: "alert",
+                title: `${feature} title`,
+                message: `Message from ${feature}`,
+                confirmText: "ตกลง",
+                cancelText: "ยกเลิก",
+              },
+            }),
+            "http://localhost:3000/"
+          );
+        })
+          .then((data) => {
+            console.log("Successfully : ", data);
+            document.getElementById(
+              "result"
+            ).textContent = `Successfully => ${data}`;
+            document.getElementById("result").style.color = "green";
+            document.getElementById("result").style.backgroundColor = "#ffffff";
+            // alert(`Successfully : ${data}`);
+          })
+          .catch((err) => {
+            console.log("Error : ", err);
+            document.getElementById("result").textContent = `Failed => ${err}`;
+            document.getElementById("result").style.backgroundColor = "#ffffff";
+            document.getElementById("result").style.color = "red";
+
+            // alert(`Error : ${err}`);
+          });
+
+        console.log("send to new ionboard app");
+      };
+
+      function sendMessage(type) {
+        const message = "Hello from Child Window!";
+        parent.postMessage(
+          {
+            type: `${feature}/alert/${type}`,
+            payload: {
+              id: "",
+              type: type,
+            },
+          },
+          "http://localhost:3000/"
+        );
+      }
+
+      window.addEventListener("message", receiveMessage);
+
+      function receiveMessage(event) {
+        // Check the origin of the sender
+        if (event.origin !== "http://localhost:3000") return;
+        const receiveData = JSON.parse(event.data, null, 2);
+
+        if (
+          typeof receiveData == "object" &&
+          receiveData?.type == "scan_card"
+        ) {
+          document.getElementById("card").textContent = JSON.stringify(
+            receiveData?.card,
+            null,
+            2
+          );
+        }
+        if (typeof receiveData == "object" && receiveData?.type == "alert") {
+          if (obj?.[receiveData?.id]) {
+            if (receiveData?.method == "success") {
+              obj?.[receiveData?.id]?.[0]("resolve from ionboard");
+            } else if (receiveData?.method == "error") {
+              obj?.[receiveData?.id]?.[1]("reject from ionboard");
+            }
+          }
+        } else {
+          // console.log(event.data);
+          // document.getElementById("lastIFrameKeyCode").textContent = event.data;
+        }
+        // Process the message
+      }
+
+      init();
+
+      // In the iframe
+    </script>
+  </body>
+</html>

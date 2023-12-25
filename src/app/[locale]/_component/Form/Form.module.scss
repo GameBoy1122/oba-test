@@ -1,0 +1,63 @@
+.sectionLogin {
+  //   background-image: url(../src/images/login/bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  display: flex;
+}
+
+.loginBox {
+  margin: auto;
+  max-width: 400px;
+  align-items: center;
+}
+
+.loginBox__header {
+  margin-bottom: 30px;
+}
+
+.loginBox__content,
+.loginBox__footer {
+  margin: auto;
+  max-width: 280px;
+}
+
+.loginBox__content {
+  margin-bottom: 40px !important;
+}
+
+.loginBox__title {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.text-input {
+  width: 100%;
+  padding: 11px 10px;
+  font-size: 18px;
+  background: #fff;
+  border: 0;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 0;
+  outline: 0;
+  color: #000;
+  &.error {
+    border: 2px solid #e86666;
+  }
+}
+
+.input_password {
+  position: relative;
+}
+
+.eye-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin: auto;
+  display: flex;
+  transform: translate(0, -50%);
+}

@@ -1,0 +1,36 @@
+.modal {
+  &_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    justify-content: center;
+
+    &_heading {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    &_content {
+      font-size: 24px;
+    }
+
+    &_icon {
+      font-size: 100px;
+      font-weight: 600;
+    }
+
+    &_button-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &_button {
+      font-size: 20px;
+      width: 30%;
+    }
+  }
+}

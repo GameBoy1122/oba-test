@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  //   flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  background-color: var(--color-purple--secondary);
+  border: 1px solid var(--color-purple--secondary);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: var(--color-purple--primary);
+  border: 1px solid var(--color-purple--primary);
+}

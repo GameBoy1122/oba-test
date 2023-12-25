@@ -1,0 +1,16 @@
+{
+  "common": {
+    "title": "Title!!",
+    "loading": "Loading..."
+  },
+  "login": {
+    "title": "Open a customer account easily with RB Front (POC).",
+    "sign_in": "Sign in"
+  },
+  "landing": {
+    "title": "Please select a product type.",
+    "confirm": "Confirm",
+    "not_available": "Sorry for the inconvenience \n The system is temporarily closed"
+  },
+  "alert": {}
+}

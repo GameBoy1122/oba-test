@@ -1,0 +1,17 @@
+.iframeWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .iframeWrapper {
+    margin-top: 60px;
+  }
+}
+
+.iframeWrapper iframe {
+  width: 100%;
+  height: 100%;
+}

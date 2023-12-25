@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Glyphs/Quick Actions/Show News</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5,6.49700466 C5,5.39408944 5.88976324,4.5 7.00359486,4.5 L27.9964051,4.5 C29.10296,4.5 30,5.39497885 30,6.49700466 L30,28.5029953 C30,29.6059106 29.1102368,30.5 27.9964051,30.5 L7.00359486,30.5 C5.89703997,30.5 5,29.6050211 5,28.5029953 L5,6.49700466 Z M6.5,6 L6.5,29 L28.5,29 L28.5,6 L6.5,6 Z M18.5,10.5 L26.5,10.5 L26.5,12 L18.5,12 L18.5,10.5 Z M18.5,19.5 L26.5,19.5 L26.5,21 L18.5,21 L18.5,19.5 Z M8.5,19.5 L16.5,19.5 L16.5,21 L8.5,21 L8.5,19.5 Z M18.5,15 L26.5,15 L26.5,16.5 L18.5,16.5 L18.5,15 Z M18.5,24 L26.5,24 L26.5,25.5 L18.5,25.5 L18.5,24 Z M8.5,24 L16.5,24 L16.5,25.5 L8.5,25.5 L8.5,24 Z M12.6071777,17.0839844 C12.6071777,17.0839844 8.1015625,13.6806641 8.1015625,11.7614746 C8.1015625,9.84228516 9.34204102,8.86743164 10.2409668,8.91601563 C11.1398926,8.96459961 12.6071777,10.1870117 12.6071777,10.1870117 C12.6071777,10.1870117 13.7120361,8.96459961 14.6166992,8.96459961 C15.5213623,8.96459961 16.9501953,9.43481445 16.9501953,11.4697266 C16.9501953,13.5046387 12.6071777,17.0839844 12.6071777,17.0839844 Z" id="path-1"></path>
+    </defs>
+    <g id="Glyphs/Quick-Actions/Show-News" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="News" fill="#000000">
+            <use style="mix-blend-mode: overlay;" xlink:href="#path-1"></use>
+            <use fill-opacity="0.75" style="mix-blend-mode: overlay;" xlink:href="#path-1"></use>
+            <use fill-opacity="0.75" style="mix-blend-mode: hard-light;" xlink:href="#path-1"></use>
+        </g>
+        <g id="_Resources/Colors/Tint-1" mask="url(#mask-2)" fill="#F0EBFB">
+            <rect id="Swatch" x="0" y="0" width="35" height="35"></rect>
+        </g>
+    </g>
+</svg>

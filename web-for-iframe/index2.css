@@ -1,0 +1,9 @@
+.btn-purple {
+  color: #fff;
+  background: var(--color-purple--light);
+  border: 1px solid var(--color-purple--light);
+  &:hover {
+    background: #601ea6 !important;
+  }
+  padding: 8px;
+}

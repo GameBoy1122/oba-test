@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en"
+  manifest="ionboard.appcache">
+
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="/js/initParams.js"></script>
+</head>
+
+<body ng:onload="bootstrapWidget(__WIDGET__, 'scb-widget-indi-app-control')" class="ng-cloak">
+  <!--TODO FE-FT-INDI_APP_CTRL-->
+  <!-- ALL main widget need in iOnboard -->
+
+  <device-detail-component></device-detail-component>
+
+  <hack-mode-widget></hack-mode-widget>
+
+  <widget-view name="scb-widget-login">
+    <login-widget></login-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-main">
+    <main-widget></main-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-tracks-select">
+    <tracks-select-widget></tracks-select-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-product-select">
+    <product-select-widget></product-select-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-customer-info">
+    <customer-info-widget></customer-info-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-product-application">
+    <product-application-widget></product-application-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-risk-assessment">
+    <risk-assessment-widget></risk-assessment-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-baa">
+    <baa-widget></baa-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-checklist">
+    <checklist-widget></checklist-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-esignature">
+    <esignature-widget></esignature-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-foreigner-esignature">
+    <foreigner-esignature-widget></foreigner-esignature-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-otp">
+    <otp-widget></otp-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-submission-preview">
+    <submission-preview-widget></submission-preview-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-checker-preview">
+    <checker-preview-widget></checker-preview-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-submission-summary">
+    <submission-summary-widget></submission-summary-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-check-watchlist">
+    <check-watchlist-widget></check-watchlist-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-user-log-viewer">
+    <user-log-viewer-widget></user-log-viewer-widget>
+  </widget-view>
+
+  <widget-view name="scb-widget-doc-scanner">
+    <doc-scanner-widget></user-log-viewer-widget>
+  </widget-view>
+
+<script src="index.js"></script></body>
+
+</html>

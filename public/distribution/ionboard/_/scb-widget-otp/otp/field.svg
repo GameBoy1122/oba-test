@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,3 L3,27 L17,27 L17,3 L3,3 Z M2,0 L18,0 C19.1045695,-2.22044605e-16 20,0.8954305 20,2 L20,28 C20,29.1045695 19.1045695,30 18,30 L2,30 C0.8954305,30 0,29.1045695 0,28 L0,2 C0,0.8954305 0.8954305,2.22044605e-16 2,0 Z" id="path-1"></path>
+        <circle id="path-3" cx="2" cy="2" r="2"></circle>
+    </defs>
+    <g id="VD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10.3-Enter-OTP" transform="translate(-424.000000, -782.000000)">
+            <g id="Group" transform="translate(424.000000, 782.000000)">
+                <g id="Group-2">
+                    <path d="M4,0 L56,0 L56,56 L4,56 L4,56 C1.790861,56 4.19476067e-15,54.209139 0,52 L0,4 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="field" fill="#4F2A81"></path>
+                    <g id="Icon/ic_otp" transform="translate(12.000000, 12.000000)">
+                        <rect id="bounds" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="32" height="32"></rect>
+                        <g id="Fill" stroke-width="1" transform="translate(6.000000, 1.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#736E7A" fill-rule="nonzero" xlink:href="#path-1"></use>
+                            <g id="Mixin/Fill/alomost-white" mask="url(#mask-2)" fill="#FAFAFA">
+                                <g transform="translate(-6.000000, -1.000000)" id="color">
+                                    <rect x="0" y="0" width="32" height="32"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Fill" stroke-width="1" transform="translate(14.000000, 23.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Mask" fill="#736E7A" xlink:href="#path-3"></use>
+                            <g id="Mixin/Fill/alomost-white" mask="url(#mask-4)" fill="#FAFAFA">
+                                <g transform="translate(-14.000000, -23.000000)" id="color">
+                                    <rect x="0" y="0" width="32" height="32"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
