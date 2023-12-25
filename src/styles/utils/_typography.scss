@@ -1,0 +1,138 @@
+//Typography.scss
+//Style Guide : https://www.figma.com/file/qGEGlvVLz6e2byAlUPmi0q/EASY_FATCA_CRS?type=design&node-id=36-7050&mode=design&t=cKUlwZtJo84M0fxP-0
+
+$text-size-1: 24px;
+$text-size-2: 22px;
+$text-size-3: 20px;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$color-base-text: #353239;
+$color-secondary-text: #736e78;
+$color-secondary-text-2: #959199;
+$color-danger: #da2e36;
+$purple: purple;
+
+/* base font */
+$font-primary: sans-serif;
+$font-secondary: serif;
+
+/* line-height */
+$line-height-1: 30px;
+$line-height-2: 28px;
+$line-height-3: 24px;
+$body-line-height: 1.4;
+
+$text-scale-ratio: 1.2;
+
+/* type scale */
+$text-xs: calc(1em / ($text-scale-ratio * $text-scale-ratio));
+$text-sm: calc(1em / $text-scale-ratio);
+$text-md: calc(1em * $text-scale-ratio);
+$text-lg: calc(1em * $text-scale-ratio * $text-scale-ratio);
+$text-xl: calc(1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio);
+$text-xxl: calc(
+  1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+    $text-scale-ratio
+);
+$text-xxxl: calc(
+  1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+    $text-scale-ratio * $text-scale-ratio
+);
+
+.headline-text-1 {
+  font-size: $text-size-1; // 24px
+  font-weight: $font-medium; // 500
+  line-height: $line-height-1; // 30
+}
+
+.headline-text-2 {
+  font-size: $text-size-1; // 24px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-1; // 30
+}
+
+.headline-text-3 {
+  font-size: $text-size-2; // 22px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-2; // 28
+}
+
+.label-text-1 {
+  font-size: $text-size-3; // 20px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-3; // 24
+}
+
+.label-text-2 {
+  font-size: $text-size-2; // 22px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-2; // 28
+}
+
+.body-text {
+  font-size: $text-size-2; // 22px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-2; // 28
+}
+
+.btn-text-1 {
+  font-size: $text-size-2; // 22px
+  font-weight: $font-medium; // 500
+  line-height: $line-height-2; // 28
+}
+
+.btn-text-2 {
+  font-size: $text-size-2; // 22px
+  font-weight: $font-regular; // 400
+  line-height: $line-height-2; // 28
+}
+
+.text-gray {
+  color: $color-secondary-text;
+}
+
+.text-gray-2 {
+  color: $color-secondary-text-2;
+}
+
+.text-danger {
+  color: $color-danger;
+}
+
+.DBHeavent {
+  font-family: "__DBHeavent_208394";
+}
+
+.SF-Pro {
+  font-family: -apple-system;
+}
+
+.font-system-ui {
+  font-family: system-ui;
+}
+
+.font-size-system-ui {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+
+.font-size-none-system-ui {
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+
+.font-size-system-ui-consent {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: $font-regular;
+}
+
+.font-size-none-system-ui-consent {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: $font-regular;
+}

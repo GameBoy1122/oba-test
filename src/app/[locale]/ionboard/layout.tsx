@@ -1,6 +1,5 @@
 // import './globals.css';
-
-import { SelectedAppNavbar } from "@/components";
+import { BackNavigation, Navbar } from "@/components";
 
 export const metadata = {
   title: "iOnboard",
@@ -14,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <div>
-      <SelectedAppNavbar />
+      <Navbar
+        bgStyle="image"
+        left={<BackNavigation title="กลับสู่หน้าหลัก" />}
+      />
       {children}
     </div>
   );

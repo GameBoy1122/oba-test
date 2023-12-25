@@ -36,3 +36,46 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# Feature Roadmap
+
+## Version MVP1 (Current Release)
+
+### Features
+
+- [ ] **Feature 1:** Login LDAP with Branch selection
+- [ ] **Feature 2:** Authentication bypassing
+- [ ] **Feature 3:** Developer Mode
+  - Device detail
+  - Doc Scan
+  - Read Card
+  - user log viewer
+- [ ] **Feature 4:** Mock api
+- [ ] **Feature 5:** iOnboard dashboard
+- [x] **Enhancement 1:** Component Design System
+
+## Version MVP2 (Upcoming Release)
+
+### Planned Features
+
+- [ ] **Enhancement 1:** Brief description of the first planned enhancement.
+- [ ] **New Feature 1:** Outline a new feature to be introduced in the upcoming release.
+- [ ] **Performance Improvements:** Mention any performance-related enhancements.
+
+### Community Contributions
+
+- [ ] **Community Contribution 1:** Acknowledge and include notable community contributions.
+
+## Version 1.2.0 (Future Release)
+
+### Upcoming Features
+
+- [ ] **Integration with External Service:** Explain plans to integrate the project with an external service.
+- [ ] **User Interface Revamp:** Describe intentions to revamp the user interface for a better user experience.
+- [ ] **Internationalization Support:** Outline plans for adding support for multiple languages.
+
+### Maintenance and Stability
+
+- [ ] **Code Refactoring:** Discuss plans for refactoring code to improve maintainability.
+- [ ] **Security Audits:** Detail upcoming security audits and enhancements.

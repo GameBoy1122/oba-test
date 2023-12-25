@@ -1,5 +1,5 @@
 import { StateCreator } from "zustand";
-import {} from "@/utils/localStorage";
+import {} from "@/libs/localStorage";
 import { setAlert } from "@/zustand/actions";
 import { Alert } from "../alert";
 

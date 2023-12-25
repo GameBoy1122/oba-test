@@ -1,15 +1,13 @@
 "use client";
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import OBAButton from "@/components/buttons/OBAButton";
-import ServiceCard from "@/components/cards/ServiceCard";
-import styles from "./page.module.scss";
-import Stack from "react-bootstrap/Stack";
 import TabContainer from "./_component/TabContainer/TabContainer";
 import TabOpenAccount from "./_component/TabOpenAccount/TabOpenAccount";
 import { useLandingStore, ActiveTab } from "./_zustand/useStore";
+import styles from "./page.module.scss";
+import Stack from "react-bootstrap/Stack";
+import { Button, ServiceCard, Toast } from "@/components";
 
 const cards = [
   {
@@ -106,16 +104,18 @@ export default function LandingPage() {
       {/* <div className={styles["cardsbox"]}>
           {cards?.map((card) => (
             <ServiceCard
+              key={card.id}
               id={card.id}
               title={card.nameCard}
               image={card.imgCard}
               disabled={card.isCardDisabled}
+              disabledMessage={t("not_available")}
               active={latestClickedId === card.id}
               onClick={setLatestClickedId}
             />
           ))}
         </div>
-        <OBAButton onClick={handleNavigate} disabled={!latestClickedId}>
+        <Button onClick={handleNavigate} disabled={!latestClickedId}>
           {t("confirm")}
         </OBAButton>
         <OBAButton

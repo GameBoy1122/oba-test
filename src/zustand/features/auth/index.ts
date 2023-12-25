@@ -1,6 +1,6 @@
 import { StateCreator } from "zustand";
-import {} from "@/utils/localStorage";
-import axios from "@/utils/axiosInstance";
+import {} from "@/libs/localStorage";
+import axios from "@/libs/axiosInstance";
 import { request } from "@/zustand/actions";
 
 type UserLogin = {

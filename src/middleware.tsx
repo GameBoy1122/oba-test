@@ -1,13 +1,24 @@
-import { NextRequest } from "next/server";
-import { nextIntlMiddleware } from "@/middlewares/next-intl-middleware";
+import { NextFetchEvent, NextRequest } from "next/server";
+import {
+  composeMiddleware,
+  ignoreRouteMiddleware,
+  nextIntlMiddleware,
+  loggerMiddleware,
+} from "@/middlewares";
 
-export default async function middleware(request: NextRequest) {
-  // next-intl middleware
-  const response = nextIntlMiddleware(request);
+const middlewares = composeMiddleware([
+  loggerMiddleware,
+  ignoreRouteMiddleware,
+  nextIntlMiddleware,
+]);
 
-  return response;
+export default async function middleware(
+  request: NextRequest,
+  event: NextFetchEvent
+) {
+  return middlewares(request, event);
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
 };
