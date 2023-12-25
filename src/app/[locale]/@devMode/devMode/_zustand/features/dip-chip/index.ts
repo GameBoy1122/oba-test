@@ -1,35 +1,7 @@
 import { StateCreator } from "zustand";
-import axios from "@/utils/axiosInstance";
-
-export type CardInfo = {
-  engTitle: string;
-  engFirstName: string;
-  engLastName: string;
-  thaiTitle: string;
-  thaiFirstName: string;
-  thaiLastName: string;
-  docType: string;
-  docNo: string;
-  expDate: string;
-  issueDate: string;
-  genderCode: string;
-  dob: string;
-  manualKeyIn: boolean;
-  photo: string;
-  address: Address;
-};
-
-export type Address = {
-  usageCode: string;
-  thaiAddressNumber: string;
-  thaiAddressMoo: string;
-  thaiAddressTrok: string;
-  thaiAddressSoi: string;
-  thaiAddressThanon: string;
-  thaiAddressDistrict: string;
-  thaiAddressAmphur: string;
-  thaiAddressProvince: string;
-};
+import axios from "@/libs/axiosInstance";
+import { readThaiCard } from "@/libs/NativeService";
+import { CardInfo } from "@/libs/NativeService/types";
 
 type DipChipState = {
   cardInfo?: CardInfo;
@@ -49,24 +21,12 @@ export const createDipChipSlice: StateCreator<DipChipSlice> = (set, get) => ({
   onDipChip: async () => {
     set({ isLoading: true });
     if (window.Plugin && window.Plugin.NationalID) {
-      const result = new Promise<CardInfo>((ok, ko) => {
-        window.Plugin.NationalID.readThaiCard((data: any) => {
-          if (data && +data.status === 0) {
-            console.log("readThaiCard response : success");
-            ok(JSON.parse(data.cardInfo));
-          } else {
-            console.log("readThaiCard error : " + JSON.stringify(data));
-            ko(data);
-          }
-        });
-      })
-        .then((data) => {
-          set({ cardInfo: data, isLoading: false });
-        })
-        .catch((e) => {
-          console.log(e);
-          set({ isLoading: false });
-        });
+      try {
+        const res = await readThaiCard();
+        set({ cardInfo: res, isLoading: false });
+      } catch (e) {
+        set({ isLoading: false });
+      }
     } else {
       try {
         const res = await axios("/api/cardInfo");

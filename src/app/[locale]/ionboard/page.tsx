@@ -3,7 +3,7 @@
 import { IFrame } from "@/components/iframe";
 import styles from "./page.module.scss";
 import Stack from "react-bootstrap/Stack";
-import { loadLocalStorage } from "@/utils/localStorage";
+import { loadLocalStorage } from "@/libs/localStorage";
 import { redirect } from "next/navigation";
 import { useAppStore } from "@/zustand/useAppStore";
 

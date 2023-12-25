@@ -1,5 +1,5 @@
 import { create, StateCreator } from "zustand";
-import axios from "@/utils/axiosInstance";
+import axios from "@/libs/axiosInstance";
 import { persist, PersistOptions, createJSONStorage } from "zustand/middleware";
 import { createDipChipSlice, DipChipSlice } from "./features/dip-chip";
 

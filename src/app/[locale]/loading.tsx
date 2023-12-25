@@ -1,5 +1,5 @@
-import { LoadingPopup } from "@/components";
+import { Spinner } from "@/components";
 
 export default function Loading() {
-  return <LoadingPopup />;
+  return <Spinner title="กำลังโหลด..." />;
 }

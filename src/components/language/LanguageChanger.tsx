@@ -3,7 +3,7 @@
 import { useRouter } from "next-intl/client";
 import { usePathname } from "next-intl/client";
 import { ChangeEventHandler } from "react";
-import { locales } from "@/middlewares/next-intl-middleware";
+import { locales } from "@/locales";
 import styles from "./LanguageChanger.module.scss";
 
 export default function LanguageChanger({ locale }: { locale: string }) {

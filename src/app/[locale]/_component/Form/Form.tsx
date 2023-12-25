@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Formik, FormikProps } from "formik";
-import { saveLocalStorage } from "@/utils/localStorage";
+import { saveLocalStorage } from "@/libs/localStorage";
 import { useAppStore } from "@/zustand/useAppStore";
 import { useRouter } from "next/navigation";
 import styles from "./Form.module.scss";
-import { ErrorModal } from "@/components";
+import { Toast } from "@/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useTranslations } from "next-intl";
 import type { User } from "../../_types";
-import { LoginSchema } from "@/utils/schema";
+import { LoginSchema } from "@/libs/schema";
 
 let roles = {
   // "iob", "stb", "ipf", "rbf"
@@ -32,17 +32,21 @@ const errorMessageContainer = (
   }>
 ) => {
   if (props.errors.username && props.errors.password)
-    return <ErrorModal message="กรุณากรอกรหัสพนักงาน และรหัสผ่าน" />;
+    return (
+      <Toast message="กรุณากรอกรหัสพนักงาน และรหัสผ่าน" variant={"error"} />
+    );
   else if (props.errors.username && !props.errors.password)
     return (
-      <ErrorModal
+      <Toast
         message={props.errors.username ? props.errors.username : ""}
+        variant={"error"}
       />
     );
   else if (props.errors.password && !props.errors.username)
     return (
-      <ErrorModal
+      <Toast
         message={props.errors.password ? props.errors.password : ""}
+        variant={"error"}
       />
     );
   else return null;

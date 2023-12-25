@@ -1,10 +1,11 @@
-import "./globals.scss";
+import "@/styles/globals.scss";
+
 import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
-import { locales, defaultLocale } from "@/middlewares/next-intl-middleware";
+import { locales } from "@/locales";
 import AlertProvider from "@/providers/alert-provider";
-import { OBANavbar } from "@/components";
-import DevMode from "@/utils/dev-mode";
+import DevMode from "@/libs/dev-mode";
+import { LogoImage, Navbar, UserInfo } from "@/components";
 
 interface Props {
   children: React.ReactNode;
@@ -18,15 +19,7 @@ export async function generateStaticParams() {
 
 async function getMessages(locale: string) {
   try {
-    return (await import(`../../../locales/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
-}
-
-async function getBootstrapJS() {
-  try {
-    return (await import(`../../utils/bootstrap`)).default;
+    return (await import(`@/locales/${locale}.json`)).default;
   } catch (error) {
     notFound();
   }
@@ -45,12 +38,15 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default async function RootLayout({ children, params, devMode }: Props) {
-  const messages = await getMessages(params?.locale);
-  await getBootstrapJS();
+export default async function RootLayout({
+  children,
+  params: { locale },
+  devMode,
+}: React.PropsWithChildren<Props>) {
+  const messages = await getMessages(locale);
 
   return (
-    <html lang={params?.locale}>
+    <html lang={locale}>
       <head>
         {/* <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -60,10 +56,10 @@ export default async function RootLayout({ children, params, devMode }: Props) {
         /> */}
       </head>
       <body>
-        <NextIntlClientProvider locale={params?.locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <main>
             <AlertProvider />
-            <OBANavbar />
+            <Navbar bgStyle="solid" right={<UserInfo />} left={<LogoImage />} />
             {children}
             {devMode}
             <DevMode />
@@ -78,7 +74,3 @@ export default async function RootLayout({ children, params, devMode }: Props) {
     </html>
   );
 }
-
-const DevModeProvider = ({ devMode }: { devMode: React.ReactNode }) => {
-  return devMode;
-};

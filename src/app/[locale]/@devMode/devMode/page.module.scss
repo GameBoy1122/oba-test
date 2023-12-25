@@ -2,6 +2,9 @@
 }
 
 .modal {
+  max-width: none !important;
+  width: 90%;
+
   &-header {
     background-color: var(--color-purple--primary);
     color: white;

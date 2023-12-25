@@ -1,0 +1,28 @@
+@import "../../styles/utils/variables";
+
+.toast {
+  padding: 8px;
+  display: flex;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  &-success {
+    background-color: $notification-positive;
+    color: $color-white;
+    gap: 10px;
+  }
+  &-warning {
+    background-color: $notification-warning;
+    color: $color-white;
+    gap: 10px;
+  }
+  &-error {
+    background-color: $notification-negative;
+    color: $color-white;
+    gap: 10px;
+  }
+  &-icon {
+    display: inline;
+    width: 16px;
+    height: auto;
+  }
+}

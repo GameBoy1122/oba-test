@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import style from "./TabOpenAccount.module.scss";
-import OBAButton from "@/components/buttons/OBAButton";
-import ServiceCard from "@/components/cards/ServiceCard";
+import { Button, ServiceCard } from "@/components";
 
 const cards = [
   {
@@ -51,6 +50,7 @@ export default function TabOpenAccount() {
       <div className={style["cardsbox"]}>
         {cards?.map((card) => (
           <ServiceCard
+            key={card.id}
             title={card.nameCard}
             image={card.imgCard}
             id={card.id}
@@ -61,9 +61,9 @@ export default function TabOpenAccount() {
           />
         ))}
       </div>
-      <OBAButton onClick={handleNavigate} disabled={!latestClickedId}>
+      <Button onClick={handleNavigate} disabled={!latestClickedId}>
         {"ตกลง"}
-      </OBAButton>
+      </Button>
     </div>
   );
 }
